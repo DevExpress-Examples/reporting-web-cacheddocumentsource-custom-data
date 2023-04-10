@@ -5,6 +5,6 @@
 <!-- default badges end -->
 # How to store and use custom document data in the Web Document Viewer
 
-This example demonstrates how to serialize your custom data along with other document information and use this data after the document is deserialized.
-Override <a href="https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger._methods">WebDocumentViewerOperationLogger�s</a> CachedDocumentSourceSerializing and CachedDocumentSourceDeserialized methods and use the documentDetails parameter�s CustomData property to pass and get custom document data.
-Note that starting with v18.1, the Web Document Viewer uses CachedDocumentSource to process document requests such as page render, export and print operations.
+This example demonstrates how to serialize custom data along with other document information and use that data after deserializing a document. 
+
+Override the [CachedDocumentSourceSerializing](http://docs.devexpress.devx/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger.---Zf----Sy----) and [CachedDocumentSourceDeserialized](http://docs.devexpress.devx/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger.--cK-------9--a-) methods of the  [WebDocumentViewerOperationLogger](http://docs.devexpress.devx/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger) service and use the `CustomData` property of the **documentDetails** parameter to send and receive custom document data. Note that starting with v18.1, the Web Document Viewer uses the `CachedDocumentSource` to handle document requests such as rendering, exporting, and printing page operations.
