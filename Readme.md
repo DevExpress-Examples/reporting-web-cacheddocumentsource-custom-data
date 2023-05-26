@@ -1,8 +1,3 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/150279301/2022.2)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T830513)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 # Web Reporting - How to Manage Events of a Cached Document and Pass Custom Data to the Exported Document
 
 This example creates and registers a descendant of our [WebDocumentViewerOperationLogger](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger) class to attach the [XlSheetCreated](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.PrintingSystemBase.XlSheetCreated) event handler to the document.
@@ -24,4 +19,4 @@ The product category is used to rename worksheets in the exported XLSX file. The
 
 ## Documentation
 
-* [Web Document Viewer Cache Management](http://docs.devexpress.com/XtraReports/404234/web-reporting/general-information-on-web-reporting/document-viewer-caching)
+* [Web Document Viewer Cache Management](https://docs.devexpress.com/XtraReports/404234/web-reporting/general-information-on-web-reporting/document-viewer-caching)
