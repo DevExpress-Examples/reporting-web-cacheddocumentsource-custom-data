@@ -1,11 +1,22 @@
-<!-- default badges list -->
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T830513)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
-# How to store and use custom document data in the Web Document Viewer
+# Web Reporting - How to Manage Events of a Cached Document and Pass Custom Data to the Exported Document
 
-This example demonstrates how to serialize custom data along with other document information and use that data after deserializing a document. 
+This example creates and registers a descendant of our [WebDocumentViewerOperationLogger](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger) class to attach the [XlSheetCreated](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraPrinting.PrintingSystemBase.XlSheetCreated) event handler to the document.
 
-Override the [CachedDocumentSourceSerializing](http://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger.---Zf----Sy----) and [CachedDocumentSourceDeserialized](http://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger.--cK-------9--a-) methods of the  [WebDocumentViewerOperationLogger](http://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger) service and use the `CustomData` property of the **documentDetails** parameter to send and receive custom document data. 
+This example also illustrates the technique used to restore event handlers after a document is serialized in the cache and all event handlers are detached.
 
-Note that starting with v18.1, the Web Document Viewer uses the `CachedDocumentSource` to handle document requests such as rendering, exporting, and printing page operations.
+Run the application and select **Export to XLSX**:
+
+![Export to XLSX](Images/export-screenshot.png)
+
+The product category is used to rename worksheets in the exported XLSX file. The category is displayed in the report on the page from which the worksheet originated.
+
+![Exported XLS file with Renamed Worksheets](Images/result-screenshot.png)
+
+
+## Files to Look At
+
+* [CustomWebDocumentViewerOperationLogger.cs](CustomCachedDocumentSourceSerialization/Services/CustomWebDocumentViewerOperationLogger.cs)
+
+## Documentation
+
+* [Web Document Viewer Cache Management](https://docs.devexpress.com/XtraReports/404234/web-reporting/general-information-on-web-reporting/document-viewer-caching)
